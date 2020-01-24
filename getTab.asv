@@ -1,0 +1,15 @@
+function tab = getTab(basis,c,A,AI,b,csmall)
+    for test = 1:3
+        cb(test)=c(basis(test));
+    end
+    for test1 = 1:3
+        B(:,test1) = AI(:,basis(test1));
+    end
+    Bin=inv(B);
+    cbBin = cb*Bin;
+    cbBinA_c = cb*Bin*A-csmall;
+    cbBinb = cb*Bin*b;
+    BinA = Bin*A;
+    Binb = Bin*b;
+    tab = [cbBinA_c,cbBin,cbBinb;BinA,Bin,Binb];
+end
