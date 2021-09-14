@@ -7,7 +7,7 @@ clc;
 
 %Define Symbolic vars and k value
 c = sym('c',[1,8]);
-m = 7;  %The number of cycles 
+m = 6;  %The number of cycles 
 
 %Nilpotent Adjacency Matrix for Example 2.2
 Atest = [0, c(2), c(3),   0;
